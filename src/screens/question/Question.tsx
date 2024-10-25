@@ -1,10 +1,13 @@
 import Button from "../../components/button/Button";
 import "./question.css";
-import { arrowIcon } from "../../assets";
+import { arrowIcon, questionTopBanner } from "../../assets";
+
+import TopBanner from "../../components/topBanner/TopBanner";
 
 function Question() {
   return (
     <div className="question_screen_wrap">
+      <TopBanner src={questionTopBanner}></TopBanner>
       <div className="question_screen_body">
         <div className="question_progress_circle"></div>
 
