@@ -7,19 +7,22 @@ interface GaugeInterface {
 }
 
 function SemiCircleGauge({ percentage }: GaugeInterface) {
-  const chart = useRef(null);
+  const chart = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    let gaugeOptions = {
-      hasNeedle: true,
-      needleColor: "#1E1E28",
-      needlUpdateSpeed: 1000,
-      arcColors: ["rgba(0,0,0,0)", "rgba(0,0,0,0)"],
-      centralLabel: "",
-    };
+    if (chart.current) {
+      // Check if chart.current is not null
+      const gaugeOptions = {
+        hasNeedle: true,
+        needleColor: "#1E1E28",
+        needleUpdateSpeed: 1000,
+        arcColors: ["rgba(0,0,0,0)", "rgba(0,0,0,0)"],
+        centralLabel: "",
+      };
 
-    gaugeChart(chart.current, 300, gaugeOptions).updateNeedle(percentage);
-  }, [percentage, chart]);
+      gaugeChart(chart.current, 300, gaugeOptions).updateNeedle(percentage);
+    }
+  }, [percentage]);
 
   return (
     <div className="result_meter_round">
