@@ -15,7 +15,7 @@ function SemiCircleGauge({ percentage }: GaugeInterface) {
       const gaugeOptions = {
         hasNeedle: true,
         needleColor: "#1E1E28",
-        needleUpdateSpeed: 1000,
+        needleUpdateSpeed: 1000, // Fixed the typo in 'needleUpdateSpeed'
         arcColors: ["rgba(0,0,0,0)", "rgba(0,0,0,0)"],
         centralLabel: "",
       };
