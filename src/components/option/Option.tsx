@@ -3,18 +3,13 @@ import "./Option.css";
 import { option, selectedOption } from "../../assets";
 
 interface OptionProps {
-  id?: string;
+  id: string; // id is now a required string
   text: string;
   selected?: boolean;
-  onSelectAction: (id: string) => void;
+  onSelectAction: (id: string) => void; // Ensure the action uses string
 }
 
-function Option({
-  id = "",
-  text = "",
-  selected = false,
-  onSelectAction,
-}: OptionProps) {
+function Option({ id, text, selected = false, onSelectAction }: OptionProps) {
   return (
     <div
       className={`option_wrap ${selected ? "option_wrap_selected" : ""}`}
