@@ -1,10 +1,9 @@
-import Button from "../../components/button/Button";
 import "./question.css";
 import { arrowIcon, questionTopBanner } from "../../assets";
 
+import Button from "../../components/button/Button";
 import TopBanner from "../../components/topBanner/TopBanner";
 import QuestionTitle from "../../components/questionTitle/QuestionTitle";
-import QuestionImage from "../../components/questionImage/QuestionImage";
 
 function Question() {
   return (
