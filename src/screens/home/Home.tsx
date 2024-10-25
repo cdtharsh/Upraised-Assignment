@@ -1,5 +1,5 @@
 import "./Home.css";
-import logo from "../../../assets/logo.svg";
+import logo from "../../assets/logo.svg";
 
 function Home() {
   return (
@@ -8,6 +8,8 @@ function Home() {
       <div className="home_screen_body">
         <h2 className="home_screen_title">Quiz</h2>
       </div>
+
+      <button className="home_screen_start" title="Start"></button>
     </div>
   );
 }
