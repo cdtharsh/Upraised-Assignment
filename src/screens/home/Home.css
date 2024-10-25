@@ -24,3 +24,10 @@
     border-radius: 50%;
     align-items: center;
 }
+
+.home_screen_start{
+    max-width: 750px;
+    min-width: 90px;
+    top: 20px;
+    left: 20px;
+}
