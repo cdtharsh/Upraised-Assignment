@@ -4,6 +4,7 @@ import { arrowIcon, questionTopBanner } from "../../assets";
 
 import TopBanner from "../../components/topBanner/TopBanner";
 import QuestionTitle from "../../components/questionTitle/QuestionTitle";
+import QuestionImage from "../../components/questionImage/QuestionImage";
 
 function Question() {
   return (
