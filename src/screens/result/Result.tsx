@@ -11,20 +11,20 @@ import { AppContext } from "../../AppContext";
 import { questionTopBanner } from "../../assets";
 
 function Result() {
-  const navigate = useNavigate();
+  //   const navigate = useNavigate();
 
-  const { totalQuestionCount, correctAnswerCount, ...state } =
-    useContext(AppContext);
+  //   const { totalQuestionCount, correctAnswerCount, ...state } =
+  //     useContext(AppContext);
 
-  const onStartAgainButtonClick = () => {
-    // resetContext();
-  };
+  //   const onStartAgainButtonClick = () => {
+  //     // resetContext();
+  //   };
 
-  useEffect(() => {
-    if (totalQuestionCount === 0) {
-      navigate("/", { replace: true });
-    }
-  }, [totalQuestionCount]);
+  //   useEffect(() => {
+  //     if (totalQuestionCount === 0) {
+  //       navigate("/", { replace: true });
+  //     }
+  //   }, [totalQuestionCount]);
 
   return (
     <div className="question_screen_wrap">
@@ -33,22 +33,24 @@ function Result() {
         <div className="result_head">Your Result</div>
 
         <div className="result_meter_wrap">
-          <SemiCircleGauge
+          {/* <SemiCircleGauge
             percentage={(correctAnswerCount / totalQuestionCount) * 100}
-          />
+          /> */}
         </div>
 
-        <ResultOutput count={correctAnswerCount} isCorrect={true} />
-        {/* <ResultOutput count={incorrectAnswerCount} isCorrect = {false} /> */}
+        {/* <ResultOutput count={correctAnswerCount} isCorrect={true} />
+        <ResultOutput count={incorrectAnswerCount} isCorrect = {false} /> */}
 
         <div className="result_button_wrap">
           <Button
             className="next_button"
             text={"Start Agian"}
-            action={onStartAgainButtonClick}
+            action={() => {}}
           />
         </div>
       </div>
     </div>
   );
 }
+
+export default Result;
