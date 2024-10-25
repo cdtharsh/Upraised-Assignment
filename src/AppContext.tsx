@@ -10,7 +10,7 @@ interface AppContextType {
   totalQuestionCount: number;
   setQuestions: (val: any[]) => void;
   addOneToCorrectAnswerCount: () => void;
-  addOneToIncorrectAnswerCount: (val: any) => void;
+  addOneToIncorrectAnswerCount: () => void; // Removed val argument here
   setTotalQuestionCount: (val: number) => void;
   resetContext: () => void;
 }
@@ -23,7 +23,7 @@ export const DefaultContext: AppContextType = {
   totalQuestionCount: 0,
   setQuestions: () => {},
   addOneToCorrectAnswerCount: () => {},
-  addOneToIncorrectAnswerCount: () => {},
+  addOneToIncorrectAnswerCount: () => {}, // Updated to remove argument
   setTotalQuestionCount: () => {},
   resetContext: () => {},
 };
