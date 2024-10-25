@@ -16,7 +16,7 @@ function ProgressCircle({ current, total }: ProgressCircleInterface) {
       <svg
         width={circleWidth}
         height={circleWidth}
-        viewBox={"0 0 ${circleWidth} ${circleWidth}"}
+        viewBox={`0 0 ${circleWidth} ${circleWidth}`}
       >
         <circle
           cx={circleWidth / 2}
