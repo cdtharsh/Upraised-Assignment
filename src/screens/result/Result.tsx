@@ -17,7 +17,8 @@ function Result() {
     totalQuestionCount,
     correctAnswerCount,
     incorrectAnswerCount,
-  } = useContext(AppContext); // Removed '...state'
+    ...state
+  } = useContext(AppContext);
 
   const onStartAgainButtonClick = () => {
     resetContext();
@@ -27,7 +28,7 @@ function Result() {
     if (totalQuestionCount === 0) {
       navigate("/", { replace: true });
     }
-  }, [totalQuestionCount, navigate]);
+  }, [totalQuestionCount]);
 
   return (
     <div className="question_screen_wrap">
